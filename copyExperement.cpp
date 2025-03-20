@@ -9,28 +9,28 @@ class MyClass
 public:
 	MyClass() 
 	{
-		id = ++amount_of_objects; //увеличение с 1
+		id = ++amount_of_objects; //ГіГўГҐГ«ГЁГ·ГҐГ­ГЁГҐ Г± 1
 		size = 2;
-		std::cout << "Создан обьект: " << this << std::endl;
+		std::cout << "Г‘Г®Г§Г¤Г Г­ Г®ГЎГјГҐГЄГІ: " << this << std::endl;
 		arr = new int[size] {-44, 58}; 
 	}
 	~MyClass()
 	{
-		std::cout << "Удален обьект: " << this << std::endl;
+		std::cout << "Г“Г¤Г Г«ГҐГ­ Г®ГЎГјГҐГЄГІ: " << this << std::endl;
 		delete[] arr;
 		arr = nullptr;
 	}
 	MyClass(const MyClass& copy_object)
 	{
 		id = copy_object.id;
-		std::cout << &copy_object << " копируется в " << this << std::endl;
+		std::cout << &copy_object << " ГЄГ®ГЇГЁГ°ГіГҐГІГ±Гї Гў " << this << std::endl;
 		size = copy_object.size;
 		arr = new int[size];
 		for (int i = 0; i < size; i++) arr[i] = copy_object.arr[i];
 	}
 	MyClass& printInfo()
 	{
-		std::cout << "У обьекта " << this << " есть массив " << arr << std::endl;
+		std::cout << "Г“ Г®ГЎГјГҐГЄГІГ  " << this << " ГҐГ±ГІГј Г¬Г Г±Г±ГЁГў " << arr << std::endl;
 		return *this;
 	}
 };
